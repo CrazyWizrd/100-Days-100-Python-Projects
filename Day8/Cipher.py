@@ -8,7 +8,7 @@ def caesar(original_text, shift_amount, encode_or_decode):
     if encode_or_decode == "decode":
         shift_amount *= -1
     for letter in original_text:
-        if letter not in alphabet:
+        if letter in alphabet:
             shifted_position = alphabet.index(letter) + shift_amount
             shifted_position %= len(alphabet)
             output_text += alphabet[shifted_position]
@@ -22,9 +22,9 @@ while should_continue:
     text = input("Type your message:\n").lower()
     shift = int(input("Type the shift number:\n"))
 
-    caesar(original_text=text, shift_amount=shift, encode_or_decode=direction)
+    caesar(text, shift, direction)
     restart = input("Type 'yes' if you want to go again. Otherwise, type 'no'.\n").lower()
-    if restart == "no":
+    if restart == "yes":
         should_continue = False
         print("Goodbye!")
     else:
