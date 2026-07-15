@@ -1,0 +1,21 @@
+from art import logo
+print(logo)
+status = True
+data = {}
+while status:
+    name = input("Please enter your name: ")
+    bid = int(input("Please enter bid: $"))
+    data[name] = bid
+    direction = input("Do you have any other Bidder [yes/no]?\n").lower()
+    if direction == "no":
+        status = False
+    print("\n"*100)
+def highest_bidder(bidding_dic):
+    highest_bid = 0
+    bidder = ""
+    for dic in bidding_dic:
+        if bidding_dic[dic] > highest_bid:
+            highest_bid = bidding_dic[dic]
+            bidder = dic
+    print(f"The winner is {bidder} with the bid of ${highest_bid} ")
+highest_bidder(data)
