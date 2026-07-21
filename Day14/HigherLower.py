@@ -23,10 +23,6 @@ def comparison(dummy_score,dummy_a,dummy_b,dummy_list):
     game(dummy_score,dummy_a,dummy_b)
 def game(score,a,b):
     print(logo)
-    if a["follower_count"] >= b["follower_count"]:
-        print("Its A")
-    elif b["follower_count"] > a["follower_count"]:
-        print("Its B")
     if len(data) > 1:
         if score > 0:
             print(f"You are Right! Current Score: {score}")
