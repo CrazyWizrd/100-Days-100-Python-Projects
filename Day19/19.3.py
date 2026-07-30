@@ -3,7 +3,7 @@ from random import *
 
 screen = Screen()
 screen.setup(width=600,height=400)
-user_bet = screen.textinput(title="Who do you think is going to Win!!", prompt="Who will win? (Jimmy/Kim/Howard/Nacho/Charles/Lalo):").lower
+user_bet = screen.textinput(title="Who do you think is going to Win!!", prompt="Who will win? (Jimmy/Kim/Howard/Nacho/Charles/Lalo):").lower()
 x = -270
 y = -125
 turtles = [ "Jimmy", "Kim", "Howard", "Nacho", "Charles", "Lalo"]
@@ -24,11 +24,11 @@ if user_bet:
 while game_one:
     for turtle_name in all_turtle:
         if turtle_name.xcor() > 270:
-            wining_turtle = turtles[all_turtle.index(turtle_name)]
-            if wining_turtle ==user_bet:
-                print(f"Spot on!! {wining_turtle} Wins!!")
+            winning_turtle = turtles[all_turtle.index(turtle_name)]
+            if winning_turtle ==user_bet:
+                print(f"Spot on!! {winning_turtle} Wins!!")
             else:
-                print(f"Sad!! {wining_turtle} won over your bet.")
+                print(f"Sad!! {winning_turtle} won over your bet.")
             game_one = False
         rand_distance = randint(0,10)
         turtle_name.fd(rand_distance)
