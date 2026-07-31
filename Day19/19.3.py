@@ -33,5 +33,4 @@ while game_one:
         rand_distance = randint(0,10)
         turtle_name.fd(rand_distance)
 
-
 screen.exitonclick()
