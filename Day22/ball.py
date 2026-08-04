@@ -1,4 +1,5 @@
 from turtle import Turtle
+from time import sleep
 
 class Ball(Turtle):
 

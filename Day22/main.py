@@ -33,12 +33,12 @@ while game_one:
     if ball.ycor() > 280 or ball.ycor() < -280:
         ball.bounce_y()
 
-    if ball.distance(r_paddle) < 50 and ball.xcor() >= 330:
+    if ball.distance(r_paddle) < 55 and ball.xcor() >= 320:
         ball.bounce_x()
         if time >= 0.03:
             time -= 0.01
 
-    if ball.distance(l_paddle) < 50 and ball.xcor() >= -330:
+    if ball.distance(l_paddle) < 55 and ball.xcor() <= -320:
         ball.bounce_x()
         if time >= 0.06:
             time -= 0.01
