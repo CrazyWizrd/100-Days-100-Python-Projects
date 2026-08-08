@@ -24,5 +24,5 @@ while not game_over:
             print(f"You got it!! The answer was {random_number}")
             game_over = True
     elif attempts == 0:
-        print("You run out of Guesses! You Lost!!")
+        print(f"You run out of Guesses! You Lost!! The number was {random_number}")
         game_over = True
